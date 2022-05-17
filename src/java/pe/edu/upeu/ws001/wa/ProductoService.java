@@ -22,16 +22,8 @@ public class ProductoService {
     
     ProductoDao pd = new ProductoDaoImpl();
     
-    /**
-     * This is a sample web service operation
-     */
-    @WebMethod(operationName = "helloProducto")
-    public String hello(@WebParam(name = "name") String txt) {
-        return "Hello " + txt + " !";
-    }
-    
     @WebMethod(operationName = "editarProducto")
-    public int editar(@WebParam(name = "nomprod") String nomprod , @WebParam(name = "precio") double precio , @WebParam(name = "stock") int stock, @WebParam(name = "idproducto") int idproducto) {
+    public int editar4(@WebParam(name = "nomprod") String nomprod , @WebParam(name = "precio") double precio , @WebParam(name = "stock") int stock, @WebParam(name = "idproducto") int idproducto) {
         Producto p = new Producto();
         p.setNomprod(nomprod);
         p.setPrecio(precio);
@@ -42,7 +34,7 @@ public class ProductoService {
 
    
     @WebMethod(operationName = "insertarProducto")
-    public int insertar(@WebParam(name = "nomprod") String nomprod , @WebParam(name = "precio") double precio , @WebParam(name = "stock") int stock) {
+    public int insertar4(@WebParam(name = "nomprod") String nomprod , @WebParam(name = "precio") double precio , @WebParam(name = "stock") int stock) {
         //TODO write your implementation code here:
         Producto p = new Producto();
         p.setNomprod(nomprod);
@@ -53,7 +45,7 @@ public class ProductoService {
 
   
     @WebMethod(operationName = "eliminarProducto")
-    public int eliminar(@WebParam(name = "idproducto") int idproducto) {
+    public int eliminar4(@WebParam(name = "idproducto") int idproducto) {
         //TODO write your implementation code here:
         return pd.delete(idproducto);
     }
@@ -61,14 +53,14 @@ public class ProductoService {
 
    
     @WebMethod(operationName = "readAllProducto")
-    public List<Producto> readAll() {
+    public List<Producto> readAll4() {
         //TODO write your implementation code here:
         return pd.readAll();
     }
 
  
     @WebMethod(operationName = "readProducto")
-    public Producto read(@WebParam(name = "idproducto") int idproducto) {
+    public Producto read4(@WebParam(name = "idproducto") int idproducto) {
         //TODO write your implementation code here:
         return pd.read(idproducto);
     }

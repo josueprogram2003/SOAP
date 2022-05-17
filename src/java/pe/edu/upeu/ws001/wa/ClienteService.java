@@ -22,18 +22,8 @@ import pe.edu.upeu.ws001.model.Cliente;
 public class ClienteService {
     ClienteDao cd = new ClienteDaoImpl();
     
-    /**
-     * This is a sample web service operation
-     */
-    
-    @WebMethod(operationName = "helloCliente")
-    public String hello(@WebParam(name = "name") String txt) {
-        return "Hello " + txt + " !";
-    }
-    
-     
     @WebMethod(operationName = "editarCliente")
-    public int editar(@WebParam(name = "nombres") String nombres , @WebParam(name = "apellidos") String apellidos , @WebParam(name = "dni") String dni, @WebParam(name = "direccion") String direccion, @WebParam(name = "idcliente") int idcliente) {
+    public int editar1(@WebParam(name = "nombres") String nombres , @WebParam(name = "apellidos") String apellidos , @WebParam(name = "dni") String dni, @WebParam(name = "direccion") String direccion, @WebParam(name = "idcliente") int idcliente) {
         Cliente c = new Cliente();
         c.setNombres(nombres);
         c.setApellidos(apellidos);
@@ -45,7 +35,7 @@ public class ClienteService {
 
    
     @WebMethod(operationName = "insertarCliente")
-    public int insertar(@WebParam(name = "nombres") String nombres , @WebParam(name = "apellidos") String apellidos , @WebParam(name = "dni") String dni, @WebParam(name = "direccion") String direccion) {
+    public int insertar1(@WebParam(name = "nombres") String nombres , @WebParam(name = "apellidos") String apellidos , @WebParam(name = "dni") String dni, @WebParam(name = "direccion") String direccion) {
         //TODO write your implementation code here:
         Cliente c = new Cliente();
         c.setNombres(nombres);
@@ -57,7 +47,7 @@ public class ClienteService {
 
   
     @WebMethod(operationName = "eliminarCliente")
-    public int eliminar(@WebParam(name = "idcliente") int idcliente) {
+    public int eliminar1(@WebParam(name = "idcliente") int idcliente) {
         //TODO write your implementation code here:
         return cd.delete(idcliente);
     }
@@ -65,13 +55,13 @@ public class ClienteService {
 
    
     @WebMethod(operationName = "readAllCliente")
-    public List<Cliente> readAll() {
+    public List<Cliente> readAll1() {
         //TODO write your implementation code here:
         return cd.readAll();
     }
 
     @WebMethod(operationName = "readCliente")
-    public Cliente read(@WebParam(name = "idcliente") int idcliente) {
+    public Cliente read1(@WebParam(name = "idcliente") int idcliente) {
         //TODO write your implementation code here:
         return cd.read(idcliente);
     }

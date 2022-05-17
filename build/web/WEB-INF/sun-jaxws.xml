@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoints version="2.0" xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime">
+  <endpoint implementation="pe.edu.upeu.ws001.wa.DetalleService" name="DetalleService" url-pattern="/DetalleService"/>
   <endpoint implementation="pe.edu.upeu.ws001.wa.NewWebService" name="NewWebService" url-pattern="/NewWebService"/>
   <endpoint implementation="pe.edu.upeu.ws001.wa.VentaService" name="VentaService" url-pattern="/VentaService"/>
-  <endpoint implementation="pe.edu.upeu.ws001.wa.ProductoService" name="ProductoService" url-pattern="/ProductoService"/>
-  <endpoint implementation="pe.edu.upeu.ws001.wa.DetalleService" name="DetalleService" url-pattern="/DetalleService"/>
   <endpoint implementation="pe.edu.upeu.ws001.wa.ClienteService" name="ClienteService" url-pattern="/ClienteService"/>
+  <endpoint implementation="pe.edu.upeu.ws001.wa.ProductoService" name="ProductoService" url-pattern="/ProductoService"/>
 </endpoints>

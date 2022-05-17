@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/WebServices/WebService.java to edit this template
- */
 package pe.edu.upeu.ws001.wa;
 
 import java.util.List;
@@ -27,7 +23,7 @@ public class NewWebService {
     
  
     @WebMethod(operationName = "editar")
-    public int editar(@WebParam(name = "idrol") int idrol, @WebParam(name = "nombre") String nombre) {
+    public int editar3(@WebParam(name = "idrol") int idrol, @WebParam(name = "nombre") String nombre) {
         Rol r = new Rol();
         r.setNombre(nombre);
         r.setIdrol(idrol);
@@ -36,7 +32,7 @@ public class NewWebService {
 
    
     @WebMethod(operationName = "insertar")
-    public int insertar(@WebParam(name = "nombre") String nombre) {
+    public int insertar3(@WebParam(name = "nombre") String nombre) {
         //TODO write your implementation code here:
         Rol r = new Rol();
         r.setNombre(nombre);
@@ -45,7 +41,7 @@ public class NewWebService {
 
   
     @WebMethod(operationName = "eliminar")
-    public int eliminar(@WebParam(name = "idrol") int idrol) {
+    public int eliminar3(@WebParam(name = "idrol") int idrol) {
         //TODO write your implementation code here:
         return rd.delete(idrol);
     }
@@ -53,14 +49,14 @@ public class NewWebService {
 
    
     @WebMethod(operationName = "readAll")
-    public List<Rol> readAll() {
+    public List<Rol> readAll3() {
         //TODO write your implementation code here:
         return rd.readAll();
     }
 
  
     @WebMethod(operationName = "read")
-    public Rol read(@WebParam(name = "id") int id) {
+    public Rol read3(@WebParam(name = "id") int id) {
         //TODO write your implementation code here:
         return rd.read(id);
     }

@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services>
+    <service name="DetalleService">
+      <implementation-class>pe.edu.upeu.ws001.wa.DetalleService</implementation-class>
+    </service>
     <service name="NewWebService">
       <implementation-class>pe.edu.upeu.ws001.wa.NewWebService</implementation-class>
     </service>
     <service name="VentaService">
       <implementation-class>pe.edu.upeu.ws001.wa.VentaService</implementation-class>
     </service>
-    <service name="ProductoService">
-      <implementation-class>pe.edu.upeu.ws001.wa.ProductoService</implementation-class>
-    </service>
-    <service name="DetalleService">
-      <implementation-class>pe.edu.upeu.ws001.wa.DetalleService</implementation-class>
-    </service>
     <service name="ClienteService">
       <implementation-class>pe.edu.upeu.ws001.wa.ClienteService</implementation-class>
+    </service>
+    <service name="ProductoService">
+      <implementation-class>pe.edu.upeu.ws001.wa.ProductoService</implementation-class>
     </service>
   </services>
   <clients/>

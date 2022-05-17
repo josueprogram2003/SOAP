@@ -21,17 +21,9 @@ public class DetalleService {
     
     DetalleDao dd = new DetalleDaoImpl();
     
-     /**
-     * This is a sample web service operation
-     */
-    
-    @WebMethod(operationName = "helloDetalle")
-    public String hello(@WebParam(name = "name") String txt) {
-        return "Hello " + txt + " !";
-    }
-    
+      
     @WebMethod(operationName = "editarDetalle")
-    public int editar(@WebParam(name = "precio") double precio , @WebParam(name = "cantidad") int cantidad, @WebParam(name = "idproducto") int idproducto  , @WebParam(name = "iddetalle") int iddetalle, @WebParam(name = "idventa") int idventa) {
+    public int editar2(@WebParam(name = "precio") double precio , @WebParam(name = "cantidad") int cantidad, @WebParam(name = "idproducto") int idproducto  , @WebParam(name = "iddetalle") int iddetalle, @WebParam(name = "idventa") int idventa) {
         Detalle d = new Detalle();
         d.setIddetalle(iddetalle);
         d.setPrecio(precio);
@@ -43,7 +35,7 @@ public class DetalleService {
 
    
     @WebMethod(operationName = "insertarDetalle")
-    public int insertar(@WebParam(name = "precio") double precio , @WebParam(name = "cantidad") int cantidad, @WebParam(name = "idproducto") int idproducto  , @WebParam(name = "idventa") int idventa) {
+    public int insertar2(@WebParam(name = "precio") double precio , @WebParam(name = "cantidad") int cantidad, @WebParam(name = "idproducto") int idproducto  , @WebParam(name = "idventa") int idventa) {
         //TODO write your implementation code here:
         Detalle d = new Detalle();
         d.setPrecio(precio);
@@ -55,7 +47,7 @@ public class DetalleService {
 
   
     @WebMethod(operationName = "eliminarDetalle")
-    public int eliminar(@WebParam(name = "iddetalle") int iddetalle) {
+    public int eliminar2(@WebParam(name = "iddetalle") int iddetalle) {
         //TODO write your implementation code here:
         return dd.delete(iddetalle);
     }
@@ -63,14 +55,14 @@ public class DetalleService {
 
    
     @WebMethod(operationName = "readAllDetalle")
-    public List<Detalle> readAll() {
+    public List<Detalle> readAll2() {
         //TODO write your implementation code here:
         return dd.readAll();
     }
 
  
     @WebMethod(operationName = "readDetalle")
-    public Detalle read(@WebParam(name = "iddetalle") int iddetalle) {
+    public Detalle read2(@WebParam(name = "iddetalle") int iddetalle) {
         //TODO write your implementation code here:
         return dd.read(iddetalle);
     }
